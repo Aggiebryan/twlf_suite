@@ -13,7 +13,6 @@ import sqlite3
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Iterable
 
-
 # Locate the database alongside this package at project root.  Creating the
 # database file outside of the package directory simplifies backups and
 # upgrades.
@@ -30,8 +29,8 @@ DB_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "twlf_t
 #   app            text         -- user‑friendly app name
 #   filetab        text         -- file/tab title or descriptor
 #   activity_desc  text         -- optional user‑provided description
-#   project        text         -- optional project name
-#   tags           text         -- optional comma‑separated tags
+#   project        text         -- optional project name (used as “Matter” in the UI)
+#   tags           text         -- optional comma‑separated tags (used as “Contact” in the UI)
 #   clio_matter_id text         -- optional Clio matter identifier
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS sessions (
@@ -216,7 +215,6 @@ def format_duration(seconds: float) -> str:
     minutes = int((seconds % 3600) // 60)
     secs = int(seconds % 60)
     return f"{hours:02d}:{minutes:02d}:{secs:02d}"
-
 
 # Initialise the database schema on module import.  This ensures the table is
 # created when the application first runs.

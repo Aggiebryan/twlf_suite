@@ -1,0 +1,18 @@
+# Environment variables for the TWLF time tracker.
+# Populate these with your API credentials.
+
+# Clio OAuth2 credentials
+CLIO_CLIENT_ID=
+CLIO_CLIENT_SECRET=
+
+# RingCentral access (if using token-based auth, you may need more fields)
+RINGCENTRAL_API_KEY=
+
+# Microsoft Graph (typically also uses OAuth2)
+MICROSOFT_GRAPH_API_KEY=
+
+# API keys for AI platforms
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+GROK_API_KEY=
+GEMINI_API_KEY=

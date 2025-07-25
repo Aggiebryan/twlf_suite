@@ -1,0 +1,4 @@
+# Ignore environment files and database
+.env
+*.db
+twlf_time.db
